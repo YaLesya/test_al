@@ -1,0 +1,399 @@
+/*     Font     */
+
+@font-face {
+    font-family: 'ALSArtemiusSans';
+    src: url('/svalka/artemius-webfont/sans/ALSArtemiusSans-Regular.eot') format('embedded-opentype');
+    src: url('/svalka/artemius-webfont/sans/ALSArtemiusSans-Regular.eot?#iefix') format('embedded-opentype'), url('/svalka/artemius-webfont/sans/ALSArtemiusSans-Regular.woff') format('woff'), url('/svalka/artemius-webfont/sans/ALSArtemiusSans-Regular.ttf') format('truetype'), url('/svalka/artemius-webfont/sans/ALSArtemiusSans-Regular.svg#ALSArtemiusSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ALSArtemiusSans';
+    src: url('/svalka/artemius-webfont/sans/ALSArtemiusSans-Italic.eot') format('embedded-opentype');
+    src: url('/svalka/artemius-webfont/sans/ALSArtemiusSans-Italic.eot?#iefix') format('embedded-opentype'), url('/svalka/artemius-webfont/sans/ALSArtemiusSans-Italic.woff') format('woff'), url('/svalka/artemius-webfont/sans/ALSArtemiusSans-Italic.ttf') format('truetype'), url('/svalka/artemius-webfont/sans/ALSArtemiusSans-Italic.svg#ALSArtemius-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ALSArtemiusSans';
+    src: url('/svalka/artemius-webfont/sans/ALSArtemiusSans-Bold.eot') format('embedded-opentype');
+    src: url('/svalka/artemius-webfont/sans/ALSArtemiusSans-Bold.eot?#iefix') format('embedded-opentype'), url('/svalka/artemius-webfont/sans/ALSArtemiusSans-Bold.woff') format('woff'), url('/svalka/artemius-webfont/sans/ALSArtemiusSans-Bold.ttf') format('truetype'), url('/svalka/artemius-webfont/sans/ALSArtemiusSans-Bold.svg#ALSArtemius-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/*       General & Basic Styles:    */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    width: 100wh;
+    background-color: #fff;
+    font-family: 'ALSArtemiusSans';
+    font-weight: normal;
+    font-size: 100%;
+    line-height: 140%;
+    color: #4a545d;
+}
+
+.wrapper {
+    width: 100wh;
+    max-width: 2000px;
+    min-width: 320px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+/*      Cover     */
+
+.portfolio_cover {
+    position: relative;
+    min-width: 320px;
+    height: 100vh;
+    background: url("../images/bg.jpg") no-repeat;
+    background-size: cover;
+}
+
+@media screen and (orientation: portrait) {
+    .portfolio_cover {
+        height: 50vh;
+    }
+}
+
+.portfolio_title {
+    position: absolute;
+    top: 4.5em;
+    width: 100%;
+    font-family: 'ALSArtemiusSans';
+    text-align: center;
+    color: black;
+}
+
+.main_title {
+    font-size: 200%;
+    position: relative;
+    z-index: 20;
+    padding-left: 16%;
+    padding-right: 16%;
+}
+
+.portfolio_menu {
+    font-size: 85%;
+    line-height: 1.8em;
+}
+
+.portfolio_menu_left {
+    display: inline-block;
+    padding: 0.3em 1.2em 0em;
+    border: none;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-bottom-left-radius: 5px;
+    -moz-border-top-left-radius: 5px;
+    -ms-border-bottom-left-radius: 5px;
+    -ms-border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.portfolio_menu_right {
+    display: inline-block;
+    padding: 0.3em 1.2em 0em;
+    margin-left: -4px;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-bottom-right-radius: 5px;
+    -moz-border-top-right-radius: 5px;
+    -ms-border-bottom-right-radius: 5px;
+    -ms-border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.active {
+    background-color: #8dc0f4;
+    color: white;
+    font-weight: bold;
+}
+
+.deactive {
+    cursor: pointer;
+    -webkit-transition: background-color 0.2s ease;
+    -moz-transition: background-color 0.2s ease;
+    -ms-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    text-decoration: none;
+}
+
+.deactive:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: black;
+    text-decoration: none;
+}
+
+
+/*      Task     */
+
+.task {
+    font-family: 'ALSArtemiusSans';
+    font-weight: normal;
+    font-size: 100%;
+    line-height: 130%;
+    background-color: #f5f5e9;
+    padding: 0;
+    margin-bottom: 3em;
+}
+
+.task_title {
+    font-style: italic;
+    text-align: right;
+    padding: 22px 15px;
+    vertical-align: middle;
+}
+
+.task_content {
+    padding: 22px 15px;
+    vertical-align: middle;
+}
+
+.task_date {
+    background: linear-gradient(to top, #f5f5e9, #ddded0);
+    padding: 22px 15px;
+}
+
+.task_date p {
+    color: #555555;
+    font-size: 85%;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+
+/*      Content    */
+
+.portfolio_content {
+    padding: 0;
+    margin-bottom: 2em;
+}
+
+.portfolio_text {
+    padding-left: 16%;
+    padding-right: 16%;
+    margin-bottom: 2em;
+}
+
+.portfolio_img {
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+
+/* Carousel */
+
+.owl-carousel {
+    margin-bottom: 2em;
+    padding: 0 15px;
+}
+
+.owl-carousel .item {
+    margin: 2px;
+}
+
+.owl-carousel .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/*  Author */
+
+.author {
+    background: #f5f5e9;
+    padding: 2rem;
+}
+
+.author li {
+    list-style-type: none!important;
+}
+
+.author_title {
+    font-weight: bold;
+}
+
+.author_name {
+    font-size: 85%;
+    line-height: 120%;
+}
+
+
+/*  Scroll up */
+
+#scroller {
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    height: 70px;
+    width: 70px;
+    bottom: 50px;
+    right: 15px;
+}
+
+
+/*  Animation */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
+
+
+/*     Page Process   */
+
+.process_cover {
+    position: relative;
+    width: 100wh;
+    max-width: 2000px;
+    height: 15em;
+}
+
+.process_content {
+    padding: 0;
+    margin-bottom: 2em;
+}
+
+.process_content .section {
+    max-width: 1200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.process_img {
+    margin: 0 auto 1em auto;
+}
+
+.section .process_img {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 35%;
+    margin: 0 auto!important;
+}
+
+.process_text {
+    padding-left: 16%;
+    padding-right: 16%;
+}
+
+.section .process_text {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 60%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 15px;
+    text-align: justify;
+}
+
+.process_video {
+    width: 100%;
+    height: 720px;
+}
+
+.quotes {
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 1em;
+    background-color: #f5f5e9;
+    text-align: right;
+    font-weight: bold;
+}
+
+
+/*     Adaptive   */
+
+@media (min-width: 1300px) {
+    body,
+    p {
+        font-size: 120%;
+        line-height: 150%;
+    }
+}
+
+@media (max-width: 780px) {
+    body,
+    p {
+        font-size: 85%;
+        line-height: 120%;
+    }
+    .process_video {
+        height: 180px;
+    }
+    #scroller {
+        font-size: 9px;
+        height: 30px;
+        width: 30px;
+        bottom: 20px;
+        right: 5px;
+    }
+}
